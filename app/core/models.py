@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 
 
 class Task(Base):
+    """Task model."""
     __tablename__ = "task"
 
     id = Column(Integer, primary_key=True, index=True)

@@ -6,6 +6,7 @@ from app.core.models import Task
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    """Lifespan context manager for startup and shutdown events."""
     # Run startup logic here
     Base.metadata.create_all(bind=engine)
     yield
